@@ -1,0 +1,69 @@
+*{
+  font-family: monospace;
+}
+
+.grid-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto;
+   background-color: #b6d2cb; 
+   border: 1px solid rgba(0, 0, 0, 0.8);
+    
+  }
+
+  .grid-item {
+    background-color: rgba(222, 235, 230, 0.8);
+    border-left: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    
+  }
+
+  .grid-elementos {
+    
+   padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button {
+    margin-bottom: 5px;
+  }
+
+  .elements {
+    float: left;
+    margin-left: 10px;
+    
+  }
+
+  body{
+    background-color: rgb(234, 235, 235);
+  }
+  
+
+  .resultado{
+    text-align: center;
+    padding: 20px;
+  }
+
+  .estilobtn{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .animacion {
+    animation: fluido 10s ease-in-out infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 300%;
+    
+  }
+  
+  @keyframes fluido {
+      0% { background-position: 0 50% }
+      50% { background-position: 100% 50% }
+      100% { background-position: 0 50% }
+  }
+  
+  
