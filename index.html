@@ -1,88 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parcial PWI - Rodrigo Garcete</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
     <div class="grid-container">
-
-        <div class="grid-elementos" id="botones">
-            <div class="elements">
-                <button class="estilobtn" id="button" onclick="agregarboton()">Button</button>
-                <br><br>
-                <button class="estilobtn" id="input" onclick="agregarinput()">Input</button>
-                <br><br>
-                <button class="estilobtn" id="div" onclick="agregardiv()">DIV</button>
-                <br><br>
-                <button class="estilobtn" id="link" onclick="agregarlink()">Link</button>
-            </div>
-            <div class="elements">
-                <button class="estilobtn" id="radio" onclick="agregarradio()">Radio</button>
-                <br><br>
-                <button class="estilobtn" id="img" onclick="agregarimg()">Imagen</button>
-                <br><br>
-                <button class="estilobtn" id="tabla" onclick="agregartabla()">Tabla</button>
-                <br><br>
-                <input type="number" id="fila" value="2" style="width: 30px;" min="2" max="20">x<input type="number" id="columna" value="2" style="width: 30px;" min="2" max="20">
-            </div>
-            
+      <div class="grid-elementos" id="botones">
+        <div class="elements">
+          <button class="estilobtn" id="button" onclick="agregarboton()">
+            Button
+          </button>
+          <br /><br />
+          <button class="estilobtn" id="input" onclick="agregarinput()">
+            Input
+          </button>
+          <br /><br />
+          <button class="estilobtn" id="div" onclick="agregardiv()">DIV</button>
+          <br /><br />
+          <button class="estilobtn" id="link" onclick="agregarlink()">
+            Link
+          </button>
         </div>
-
-        <div class="grid-item">
-            <i>Click sobre el elemento para seleccionar y poder modificarlo o eliminarlo</i>
-            <br>
-            <label for="">Elemento: </label>
-            <input id="verelemento" type="text" placeholder="sin elemento seleccionado" readonly><a onclick="eliminar()" style="background-color:red; margin-left: 10px;" href="#">🗑️</a>
-
-            <hr>
-            
-                <label id="lbbtncolor">Color fondo: </label>
-                <input type="color" name="btncolor" id="btncolor" style="height: 20px;" >
-
-                <label id="lbbtncolortexto" style="margin-left: 20px;">Color texto:</label>
-                <input type="color" name="btncolortexto" id="btncolortexto" style="height: 20px;" >
-
-                <label id="lbbtncolorborde" style="margin-left: 20px;">Color borde:</label>
-                <input type="color" name="btncolorborde" id="btncolorborde" style="height: 20px;" >
-
-                <label id="lbbordeestilo" style="margin-left: 20px;">Borde estilo:</label>
-                <select name="bordeestilo" id="bordeestilo" onchange="estiloborde(this)">
-                    <option value="none">Sin borde</option>
-                    <option value="solid">solid</option>
-                    <option value="dotted">dotted</option>
-                    <option value="double">double</option>
-                    <option value="dashed">dashed</option>
-                    <option value="groove">groove</option>
-                    <option value="ridge">ridge</option>
-                    <option value="inset">inset</option>
-                    <option value="outset">outset</option>
-                </select>
-                <input type="checkbox" onchange="animar()" id="animacion"> animacion
-                <hr>
-                <label id="lbaltura" for="">Altura</label>
-                <input type="range" name="altura" id="altura" min="10" max="200">
-
-                <label id="lbancho" style="margin-left: 20px;">Ancho:</label>
-                <input type="range" name="ancho" id="ancho" max="1000">
-
-                <label id="lbtamtexto" style="margin-left: 20px;">Texto:</label>
-                <input type="range" name="tamtexto" id="tamtexto" max="100">
-
-                <label id="lbborderadio" style="margin-left: 20px;">Bordes:</label>
-                <input type="range" name="borderadio" id="borderadio" value="0" max="100">
-
-                
-            
-
+        <div class="elements">
+          <button class="estilobtn" id="radio" onclick="agregarradio()">
+            Radio
+          </button>
+          <br /><br />
+          <button class="estilobtn" id="img" onclick="agregarimg()">
+            Imagen
+          </button>
+          <br /><br />
+          <button class="estilobtn" id="tabla" onclick="agregartabla()">
+            Tabla
+          </button>
+          <br /><br />
+          <input
+            type="number"
+            id="fila"
+            value="2"
+            style="width: 30px"
+            min="2"
+            max="20"
+          />x<input
+            type="number"
+            id="columna"
+            value="2"
+            style="width: 30px"
+            min="2"
+            max="20"
+          />
         </div>
-    </div>
-    <div class="resultado" id="resultado">
+      </div>
 
+      <div class="grid-item">
+        <i
+          >Click sobre el elemento para seleccionar y poder modificarlo o
+          eliminarlo</i
+        >
+        <br />
+        <label for="">Elemento: </label>
+        <input
+          id="verelemento"
+          type="text"
+          placeholder="sin elemento seleccionado"
+          readonly
+        /><a
+          onclick="eliminar()"
+          style="background-color: red; margin-left: 10px"
+          href="#"
+          >🗑️</a
+        >
+
+        <hr />
+
+        <label id="lbbtncolor">Color fondo: </label>
+        <input
+          type="color"
+          name="btncolor"
+          id="btncolor"
+          style="height: 20px"
+        />
+
+        <label id="lbbtncolortexto" style="margin-left: 20px"
+          >Color texto:</label
+        >
+        <input
+          type="color"
+          name="btncolortexto"
+          id="btncolortexto"
+          style="height: 20px"
+        />
+
+        <label id="lbbtncolorborde" style="margin-left: 20px"
+          >Color borde:</label
+        >
+        <input
+          type="color"
+          name="btncolorborde"
+          id="btncolorborde"
+          style="height: 20px"
+        />
+
+        <label id="lbbordeestilo" style="margin-left: 20px"
+          >Borde estilo:</label
+        >
+        <select
+          name="bordeestilo"
+          id="bordeestilo"
+          onchange="estiloborde(this)"
+        >
+          <option value="none">Sin borde</option>
+          <option value="solid">solid</option>
+          <option value="dotted">dotted</option>
+          <option value="double">double</option>
+          <option value="dashed">dashed</option>
+          <option value="groove">groove</option>
+          <option value="ridge">ridge</option>
+          <option value="inset">inset</option>
+          <option value="outset">outset</option>
+        </select>
+        <div id="sctanimacion" style="float: left">
+          <input type="checkbox" onchange="animar()" id="animacion" /> animacion
+        </div>
+        <hr />
+        <label id="lbaltura" for="">Altura</label>
+        <input type="range" name="altura" id="altura" min="10" max="200" />
+
+        <label id="lbancho" style="margin-left: 20px">Ancho:</label>
+        <input type="range" name="ancho" id="ancho" max="1000" />
+
+        <label id="lbtamtexto" style="margin-left: 20px">Texto:</label>
+        <input type="range" name="tamtexto" id="tamtexto" max="100" />
+
+        <label id="lbborderadio" style="margin-left: 20px">Bordes:</label>
+        <input
+          type="range"
+          name="borderadio"
+          id="borderadio"
+          value="0"
+          max="100"
+        />
+      </div>
     </div>
+    <div class="resultado" id="resultado"></div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
