@@ -96,11 +96,7 @@ function agregarlink() {
   seleccion = contador;
   contador = parseInt(contador) + 1;
   document.getElementById("resultado").innerHTML +=
-    '<a class="link" style="cursor:pointer;" onclick="seleccionar(this)" href="#" id="elemento' +
-    conta +
-    '">Elemento ' +
-    conta +
-    "</a><br>";
+    '<p styl="width: auto" id="linkgiro'+seleccion+'"><a class="link" style="cursor:pointer;" onclick="seleccionar(this)" href="#" id="elemento' + conta +'">Elemento ' + conta + "</a></p>";
   document.getElementById("verelemento").value = "Elemento " + conta;
 
   reiniciarestado();
@@ -290,4 +286,14 @@ btnrotar.addEventListener("input", () => {
   
 
   document.getElementById("elemento" + seleccion).style.transform = "rotate("+rotacion+")";
+  document.getElementById("linkgiro" + seleccion).style.transform = "rotate("+rotacion+")";
+
 });
+
+function reset() {
+    reiniciarestado();
+    document.getElementById("resultado").innerHTML =
+    '<p><b><i>Segunda Parcial PW I 2022 - Rodrigo Garcete</i></b></p>';
+    document.getElementById("verelemento").value =
+        "Sin elemento seleccionado";
+}
