@@ -29,6 +29,7 @@ function reiniciarestado() {
   document.getElementById("ancho").value = 500;
   document.getElementById("tamtexto").value = 50;
   document.getElementById("borderadio").value = 0;
+  document.getElementById("rotar").value = 0;
 }
 
 function eliminar() {
