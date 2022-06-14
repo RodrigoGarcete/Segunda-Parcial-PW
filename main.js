@@ -296,4 +296,6 @@ function reset() {
     '<p><b><i>Segunda Parcial PW I 2022 - Rodrigo Garcete</i></b></p>';
     document.getElementById("verelemento").value =
         "Sin elemento seleccionado";
+        contador = 1;
+        seleccion = 1;
 }
