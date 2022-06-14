@@ -282,3 +282,11 @@ function animar() {
       .classList.remove("animacion");
   }
 }
+
+const btnrotar = document.querySelector("#rotar");
+btnrotar.addEventListener("input", () => {
+  let rotacion = btnrotar.value + "deg";
+  
+
+  document.getElementById("elemento" + seleccion).style.transform = "rotate("+rotacion+")";
+});
